@@ -10,6 +10,7 @@
     --bsc-radius: 3px;
     --container-wdth:95%;
     --hero-txt-bg:hsla(0, 0%, 18%, 0.644);
+    --h-clr: rgba(0, 0, 0, 0.849);
 }
 html{
     height: 100%;
@@ -22,7 +23,7 @@ body{
 }
 nav{
     position: relative;
-    margin-bottom: 9em;
+    margin-bottom: 4em;
     margin-top: 3.875em;
 }
 nav .nav-wrapper{
@@ -86,7 +87,7 @@ nav .nav-wrapper{
     align-items: center;
     background-image: url(/img/hero.jpg);
     opacity: 0.8;
-    background-position: center 35%;
+    background-position: center 48%;
     background-repeat: no-repeat;
     background-size: cover;
     height: 350px;
@@ -94,7 +95,7 @@ nav .nav-wrapper{
     margin-right: auto;
     border-radius: var(--bsc-radius);
 }
-.hero-text{
+.hero-text-container{
     background-color: var(--hero-txt-bg);
     border-radius: 15px;
     box-shadow: 2px 2px 2px rgba(29, 29, 29, 0.288);
@@ -104,25 +105,77 @@ nav .nav-wrapper{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
     padding: 0.5em 1em;
-    color: white;
+    color: rgb(5, 248, 147);
     font-size: 2rem;
     line-height: 1.4em;
     font-weight: 800;
     letter-spacing: 2px;
     -webkit-text-stroke: 1px rgb(0, 0, 0);
 }
+/* Gallery Start */
+.gallery-holder{
+    width: var(--container-wdth);
+    margin-left: auto;
+    margin-right: auto;
+    border-top: 2px solid rgb(87, 86, 86);
+    margin-top: 16px;
+    margin-bottom: 2em;
+}
+.gallery-title h2{
+    text-align: center;
+    padding: 1em 0 1.5em 0;
+    font-size: 32px;
+    color: var(--h-clr);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.images-holder{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas: "img1 img2 img2" "img1 img3 img4";
+    min-height: 500px;
+    gap: 10px;
+}
+.gallery-wrapper .images-holder div:nth-child(1){
+   background-image: url(/img/haircut2.jpg);
+   background-position: 38%;
+   background-size: cover;
+   grid-area: img1;
+  
+}
+.gallery-wrapper .images-holder div:nth-child(2){
+   background-image: url(/img/haircut1.jpg);
+   background-position: center 4%;
+   background-size: cover;
+   grid-area: img2;
+   
+}
+.gallery-wrapper .images-holder div:nth-child(3){
+   background-image: url(/img/haircut3.jpg);
+   background-position: center 11%;
+   background-size: cover;
+   
+}
+.gallery-wrapper .images-holder div:nth-child(4){
+   background-image: url(/img/haircut4.jpg);
+   background-position: 26% center;
+   background-size: cover;
+   
+}
+/* Footer Start */
 footer{
     display: flex;
     margin-top: auto;
+    height: 3em;
+    background-color: aqua;
 }
 .footer-wrapper{
-    background-color: aqua;
     width: var(--container-wdth);
     margin-left: auto;
     margin-right: auto;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 li{
@@ -133,7 +186,12 @@ a{
 }
 .footer-wrapper .footer-links ul{
     display: flex;
+    flex-direction: row;
+}
+.footer-links ul li, .social-media li{
+    padding-left: 0.5em;
 }
 .footer-wrapper .social-media{
     display: flex;
 }
+
