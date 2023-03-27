@@ -27,6 +27,7 @@ nav{
     margin-top: 3.875em;
 }
 nav .nav-wrapper{
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -78,6 +79,32 @@ nav .nav-wrapper{
     height: 4px;
     background-color: var(--humb-menu);
     border-radius: 2px;
+}
+.mobile-nav{
+    display: none;
+}
+.show-mobile-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 3.5em;
+    z-index: 2;
+    border: 1px solid rgba(0, 0, 0, 0.211);
+    border-radius: 3px;
+    background-color: var(--bg-clr);
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-top: 2em;
+    width: 100%;
+    transition: all 600ms ease-in-out;
+}
+.show-mobile-menu li{
+    text-align: center;
+    padding-bottom: 2em;
+    font-size: 1.6em;
 }
 .hero{
     width:var(--container-wdth);
