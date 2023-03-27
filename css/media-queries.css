@@ -1,0 +1,41 @@
+/* Mobile */
+@media (max-width:767px){
+   
+}
+/* Small screen */
+@media (min-width:768px){
+    
+}
+/* Medium Screen */
+@media (min-width:992px){
+    .nav-wrapper ul{
+        display: flex;
+    }
+    .nav-wrapper ul li{
+        display: flex;
+        padding-left: 1.2em;
+    }
+    .nav-wrapper ul li a{
+        color: var(--humb-menu);
+        font-size: 1.2rem;
+        font-weight: bold;
+        letter-spacing: 1.5px;
+        transition: all 350ms ease-in;
+    }
+    .nav-wrapper ul li a:hover{
+        background-color: rgba(0, 255, 255, 0.179);
+        padding-left: 1em;
+        padding-right: 1em;
+        border-radius: 5px;
+        border-left: 1px solid rgba(0, 0, 0, 0.479);
+    }
+    .nav-wrapper .humb-menu{
+        display: none;
+    }
+}
+/* Larg Screen */
+@media (min-width:1200px){
+    
+}
+
+
